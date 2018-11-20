@@ -34,6 +34,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=no, zoom=yes, useWideViewPort=yes, fullscreen=yes');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
